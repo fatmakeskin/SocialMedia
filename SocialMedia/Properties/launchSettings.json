@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json.schemastore.org/launchsettings.json",
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      "applicationUrl": "http://localhost:54133",
+      "sslPort": 0
+    }
+  },
+  "profiles": {
+    "SocialMedia": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "launchUrl": "swagger",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+
+        //MONGO
+        "MONGO_NAME": "SocialMediaApp",
+        "MONGO_URI": "mongodb://localhost:27017"
+      },
+      "applicationUrl": "http://localhost:5246",
+      "dotnetRunMessages": true
+    },
+    "IIS Express": {
+      "commandName": "IISExpress",
+      "launchUrl": "swagger",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      
+      }
+    }
+  }
+}
