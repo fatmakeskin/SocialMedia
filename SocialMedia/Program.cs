@@ -10,9 +10,6 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-// Burada farklı bir kullanım şekli olarak yazılabilir Context sınıfında onModelConfigurin olmadığı durumlarda kullanılır.
-////builder.Services.AddDbContext<MasterContext>(x => x.UseMySQL("Server=localhost;Database=newDb;Uid=root;Pwd=root;"));
-//builder.Services.AutoMapper(AppDomain.CurrentDomain.GetAssemblies);
 builder.Services.AddSingleton<IUserService, UserService>();
 builder.Services.AddSingleton<IPostService, PostService>();
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());

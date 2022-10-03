@@ -1,4 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Data.Context;
+using Microsoft.EntityFrameworkCore;
+using SocailMedia.Data.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -46,6 +48,19 @@ namespace DataAccess.MySqlBase
         {
             db.Attach(model);
             context.Entry(model).State= EntityState.Modified;
+        }
+        public User GetUserWithPassword(string email)
+        {
+            return db.Context.Users
+                .Include(x => x.Password)
+                .FirstOrDefault(x => x.Email == email);
+        }
+
+        public User GetUserWithPermission(string email)
+        {
+            return Context.Users
+                .Include(x => x.Permissions).FirstOrDefault(x => x.Email == email);
+
         }
     }
 }

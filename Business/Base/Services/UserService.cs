@@ -40,7 +40,7 @@ namespace Business.Base.Services
             }
         }
 
-        public List<UserDTO> Get()
+        public List<UserDTO> GetAll()
         {
             using (var uow = new UnitofWork())
             {

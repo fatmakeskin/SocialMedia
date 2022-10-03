@@ -10,7 +10,7 @@ namespace Business.Base.IServices
 {
     public interface IUserService
     {
-        List<UserDTO> Get();
+        List<UserDTO> GetAll();
         UserDTO Get(int id);
         void Update(UserDTO model);
         void Add(UserDTO model);
